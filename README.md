@@ -75,6 +75,45 @@ The system predicts future crop prices, recommends the most profitable markets, 
 * Historical Crop Price Records
 
 ---
+## 📊 Dataset
+
+This project uses agricultural market price data obtained from the Government of India's Open Data Platform and Agmarknet market records.
+
+### Dataset Source
+
+Users can download agricultural market datasets from:
+
+* [Data.gov.in Agricultural Datasets](https://data.gov.in/catalogs/agriculture?utm_source=chatgpt.com)
+* [AGMARKNET Portal](https://agmarknet.gov.in/?utm_source=chatgpt.com)
+
+### Dataset Placement
+
+After downloading the dataset, place it in the project root directory:
+
+```text
+XAI-agricultural-market-intelligence-system/
+│
+├── data.gov.in-1.csv
+├── backend/
+├── frontend/
+└── README.md
+```
+
+### Expected Dataset Columns
+
+The model expects agricultural market records containing fields similar to:
+
+```text
+State
+District
+Market
+Commodity
+Variety
+Arrival_Date
+Min_Price
+Max_Price
+Modal_Price
+```
 
 ## 📂 Project Structure
 
