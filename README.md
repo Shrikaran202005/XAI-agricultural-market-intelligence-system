@@ -303,25 +303,22 @@ POST /api/predict/middleman
 
 ---
 
-## 🤝 Contributing
+🚀 Live Demo
 
-Contributions are welcome.
+Frontend: https://xai-farmer-market-intelligence.netlify.app/login
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to your branch
-5. Open a Pull Request
+Backend API: https://farmer-market-backend-rtu3.onrender.com
 
----
+🔑 Demo Credentials
+👨‍🌾 Farmer Account
 
-## 📄 License
+Email: shrikaran2017@gmail.com
+Password: 123456
 
-This project is licensed under the MIT License.
+🤝 Middleman Account
 
----
-
-## 👨‍💻 Author
+Email: hari@gmail.com
+Password: 123456
 
 **Shrikaran P**
 
