@@ -1,14 +1,21 @@
 import pandas as pd
+import os
 import numpy as np
 from datetime import datetime, timedelta
 
 class AgmarknetService:
     """Agricultural data service - uses CSV data only, no API calls"""
-    
+
     def __init__(self):
-        self.csv_path = r"c:\Data\XAI project\data.gov.in-1.csv"
+        self.csv_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)),
+            "data.gov.in-1.csv"
+        )
+
         self.df = self._load_csv_data()
         self.sample_data = self._prepare_sample_data()
+
+        print(f"CSV Path: {self.csv_path}")
         print(f"✅ AgmarknetService initialized with {len(self.df):,} CSV records")
     
     def _load_csv_data(self):
