@@ -24,10 +24,13 @@ class NumpyEncoder(json.JSONEncoder):
         return super(NumpyEncoder, self).default(obj)
 
 app = Flask(__name__)
-CORS(app, origins=[
-    "http://localhost:5173",
-    "https://xai-farmer-market-intelligence.netlify.app"
-])
+CORS(
+    app,
+    resources={r"/*": {"origins": [
+        "http://localhost:5173",
+        "https://xai-farmer-market-intelligence.netlify.app"
+    ]}}
+)
 
 # Helper function to convert numpy types
 def convert_numpy(obj):
