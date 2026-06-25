@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL for the Flask API
-const API_BASE_URL = "https://farmer-market-backend-rtu3.onrender.com";;
+const API_URL = "https://farmer-market-backend-rtu3.onrender.com";
 
 // Simple cache implementation
 const cache = new Map();
@@ -24,7 +24,7 @@ const setCachedData = (key, data) => {
 
 // Create axios instance with default configuration
 const apiClient = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: API_URL,
   timeout: 30000, // 30 seconds timeout
   headers: {
     'Content-Type': 'application/json',
