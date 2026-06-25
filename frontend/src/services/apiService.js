@@ -34,7 +34,7 @@ const setCachedData = (key, data) => {
 const API_BASE_URL =
   import.meta.env.VITE_API_URL ||
   "https://farmer-market-backend-rtu3.onrender.com";
-
+console.log("API URL:", API_BASE_URL);
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
   timeout: 30000,
