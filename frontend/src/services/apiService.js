@@ -24,7 +24,7 @@ const setCachedData = (key, data) => {
 
 // Create axios instance with default configuration
 const apiClient = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 30000, // 30 seconds timeout
   headers: {
     'Content-Type': 'application/json',
