@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL for the Flask API
-const API_BASE_URL = import.meta.env.VITE_API_URL;
+// const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 // Simple cache implementation
 const cache = new Map();
@@ -23,14 +23,25 @@ const setCachedData = (key, data) => {
 };
 
 // Create axios instance with default configuration
+// const apiClient = axios.create({
+//   baseURL: import.meta.env.VITE_API_URL,
+//   timeout: 30000, // 30 seconds timeout
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+// });
+
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://farmer-market-backend-rtu3.onrender.com";
+
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
-  timeout: 30000, // 30 seconds timeout
+  baseURL: API_BASE_URL,
+  timeout: 30000,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
-
 // Request interceptor to add any custom headers
 apiClient.interceptors.request.use(
   (config) => {
