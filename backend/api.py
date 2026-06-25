@@ -26,7 +26,7 @@ class NumpyEncoder(json.JSONEncoder):
 app = Flask(__name__)
 CORS(app, origins=[
     "http://localhost:5173",
-    "https://xai-agricultural-market-intelligence.netlify.app"
+    "https://xai-farmer-market-intelligence.netlify.app"
 ])
 
 # Helper function to convert numpy types
