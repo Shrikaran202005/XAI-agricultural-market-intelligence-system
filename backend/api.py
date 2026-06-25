@@ -24,7 +24,10 @@ class NumpyEncoder(json.JSONEncoder):
         return super(NumpyEncoder, self).default(obj)
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, origins=[
+    "http://localhost:5173",
+    "https://xai-agricultural-market-intelligence.netlify.app"
+])
 
 # Helper function to convert numpy types
 def convert_numpy(obj):
@@ -886,4 +889,5 @@ def _find_potential_suppliers(crop, location, demand_quantity, current_price):
     return suppliers
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
