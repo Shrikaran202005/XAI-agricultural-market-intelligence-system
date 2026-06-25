@@ -30,7 +30,7 @@ def main():
     print("FIXED MODEL TRAINING - Target: R² ≥ 0.7, MAPE < 30%")
     print("="*70)
     
-    csv_path = r"c:\Data\XAI project\data.gov.in-1.csv"
+    csv_path = r"C:\Data\XAI project\backend\data.gov.in-1.csv"
     
     # ========================================================================
     # STEP 1: LOAD DATA
