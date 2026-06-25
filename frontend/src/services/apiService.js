@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL for the Flask API
-const API_URL = import.meta.env.VITE_API_URL;
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 // Simple cache implementation
 const cache = new Map();
@@ -24,7 +24,7 @@ const setCachedData = (key, data) => {
 
 // Create axios instance with default configuration
 const apiClient = axios.create({
-  baseURL: API_URL,
+  baseURL: API_BASE_URL,
   timeout: 30000, // 30 seconds timeout
   headers: {
     'Content-Type': 'application/json',
