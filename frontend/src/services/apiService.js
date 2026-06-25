@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL for the Flask API
-const API_URL = "https://farmer-market-backend-rtu3.onrender.com";
+const API_BASE_URL = "https://farmer-market-backend-rtu3.onrender.com";;
 
 // Simple cache implementation
 const cache = new Map();
