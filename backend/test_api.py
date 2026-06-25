@@ -2,7 +2,7 @@ import requests
 import json
 
 # Test the API endpoints
-base_url = "http://localhost:5000"
+base_url = "https://farmer-market-backend-rtu3.onrender.com"
 
 def test_health():
     try:
