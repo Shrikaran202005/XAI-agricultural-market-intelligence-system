@@ -171,7 +171,7 @@ python app.py
 Backend Server:
 
 ```text
-http://localhost:5000
+https://farmer-market-backend-rtu3.onrender.com
 ```
 
 ---
